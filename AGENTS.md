@@ -33,3 +33,4 @@ use the editor.
 - Keep demo content and service destinations centralized in a browser-safe data module so portal views and searches share one source of truth.
 - Use shared portal components and typed TanStack leaf routes for service previews and informational destinations so navigation remains functional without external dependencies.
 - Read localStorage only after hydration and persist through a shared hook to keep SSR output consistent and demo preferences local.
+- Use the shared accessible service drawer for the header menu at every width; centralized service groups keep phone and desktop navigation consistent.
