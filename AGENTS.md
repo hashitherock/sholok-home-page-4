@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project architecture
+- Keep demo content and service destinations centralized in a browser-safe data module so portal views and searches share one source of truth.
+- Use shared portal components and typed TanStack leaf routes for service previews and informational destinations so navigation remains functional without external dependencies.
+- Read localStorage only after hydration and persist through a shared hook to keep SSR output consistent and demo preferences local.
