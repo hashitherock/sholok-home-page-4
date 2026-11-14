@@ -19,6 +19,11 @@ export const products = [
  {id:6,name:'Green Living Essentials',image:essentials,price:1490,original:1990,category:'Home & Living',rating:4.6,reviews:54,discount:25}
 ];
 export type Product = typeof products[number];
+export function getProductPage(items: Product[], page: number) {
+ if (!items.length) return [];
+ const start = (page * 4) % items.length;
+ return [...items.slice(start), ...items.slice(0, start)].slice(0, 4);
+}
 export const stories = [
  {id:1,title:'A greener skyline: Dhaka’s next chapter',description:'New ideas, thoughtful spaces, and the people shaping a more connected city.',image:city,category:'News',source:'The Daily Perspective',time:'2 hours ago'},
  {id:2,title:'Small changes. A more beautiful everyday.',description:'Find inspiration in simple routines and thoughtfully designed essentials.',image:essentials,category:'Living',source:'Everyday Journal',time:'3 hours ago'},

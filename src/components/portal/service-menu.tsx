@@ -20,7 +20,7 @@ export function ServiceMenu({ open, onOpenChange }: { open: boolean; onOpenChang
           {[...new Set(services.map(service => service.category))].map(category => {
             const group = filtered.filter(service => service.category === category);
             if (!group.length) return null;
-            return <section className="menu-group" key={category}><h2>{category}</h2><div className="menu-service-grid">{group.map(service => <Link key={service.slug} to="/service/$slug" params={{ slug: service.slug }} onClick={() => onOpenChange(false)}><span className="service-icon"><service.icon/></span><span className="min-w-0">{service.name}</span><ArrowUpRight className="size-3 shrink-0 menu-arrow"/></Link>)}</div></section>;
+            return <section className="menu-group" key={category}><h2>{category}</h2><div className="menu-service-grid">{group.map(service => <Link key={service.slug} to="/service/$slug" params={{ slug: service.slug }} onClick={() => onOpenChange(false)}><span className="service-icon" data-service={service.slug}><service.icon/></span><span className="min-w-0">{service.name}</span><ArrowUpRight className="size-3 shrink-0 menu-arrow"/></Link>)}</div></section>;
           })}
           {!filtered.length && <p className="py-8 text-sm text-muted-foreground">No matching services.</p>}
         </nav>

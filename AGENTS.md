@@ -34,3 +34,4 @@ use the editor.
 - Use shared portal components and typed TanStack leaf routes for service previews and informational destinations so navigation remains functional without external dependencies.
 - Read localStorage only after hydration and persist through a shared hook to keep SSR output consistent and demo preferences local.
 - Use the shared accessible service drawer for the header menu at every width; centralized service groups keep phone and desktop navigation consistent.
+- Assign service icon themes with data-service slugs and global semantic tokens so each service keeps its color across navigation, directories and previews.

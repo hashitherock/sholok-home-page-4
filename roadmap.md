@@ -3,5 +3,6 @@
 - [x] Build news, media, shopping, discovery and editorial interactions.
 - [x] Build demo account, saved items, calendar, notes and sidebar widgets.
 - [x] Add footer destinations and verify desktop/mobile flows and tests.
-- [x] Refine premium presentation with 40% purple and 60% red-orange brand accents.
+- [ ] Update to 50% purple and 50% red-orange brand accents and distinct colors for all 17 services.
 - [x] Add responsive service menu and verify all pages across phone, tablet and desktop widths.
+- [ ] Show multiple news stories together and four products in the portal shopping section; verify phone and desktop layouts.

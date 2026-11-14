@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { services, searchContent } from '@/lib/portal-data';
+import { services, searchContent, products, getProductPage } from '@/lib/portal-data';
 describe('SHOLOK portal rules',()=>{
+ it('shows four products in each unfiltered portal shopping page',()=>{
+  expect(getProductPage(products,0).map(p=>p.id)).toEqual([1,2,3,4]);
+  expect(getProductPage(products,1).map(p=>p.id)).toEqual([5,6,1,2]);
+ });
+ it('does not duplicate products when a filter returns fewer than four',()=>{
+  expect(getProductPage(products.filter(p=>p.category==='Electronics'),0).map(p=>p.id)).toEqual([1,5]);
+ });
  it('contains exactly the specified 17 core services',()=>{
   expect(services.map(s=>s.name)).toEqual(['Cafe','Blog','Shopping','News','Smart Store','Map','Knowledge','Webtoon','Series','TV / Videos','Music','Translator','Dictionary','Finance','Sports','Weather','Real Estate']);
  });
