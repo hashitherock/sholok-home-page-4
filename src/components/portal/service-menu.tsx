@@ -25,7 +25,7 @@ export function ServiceMenu({ open, onOpenChange }: { open: boolean; onOpenChang
           {!filtered.length && <p className="py-8 text-sm text-muted-foreground">No matching services.</p>}
         </nav>
       </div>
-      <Button asChild variant="outline" className="w-full shrink-0"><Link to="/services" onClick={() => onOpenChange(false)}>Explore all 17 services <ArrowUpRight/></Link></Button>
+      <Button asChild variant="outline" className="w-full shrink-0"><Link to="/services" onClick={() => onOpenChange(false)}>Explore all services <ArrowUpRight/></Link></Button>
     </SheetContent>
   </Sheet>;
 }
