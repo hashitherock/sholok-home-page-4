@@ -6,3 +6,6 @@
 - [x] Update to 50% purple and 50% red-orange brand accents and distinct colors for all 17 services.
 - [x] Add responsive service menu and verify all pages across phone, tablet and desktop widths.
 - [x] Show multiple news stories together and four products in the portal shopping section; verify phone and desktop layouts.
+- [ ] Apply uploaded header, language, navigation and five-item categorized news requirements.
+- [ ] Audit controls and account messaging; fix broken local interactions without adding external services.
+- [ ] Verify all pages and core workflows across phone, tablet and desktop; run regression tests.
